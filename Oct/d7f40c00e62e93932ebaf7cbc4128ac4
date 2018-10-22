@@ -1,0 +1,51 @@
+Fibre ISP Cool Ideas has gone live on the new South Atlantic Cable System (SACS), which gives it direct paths to South America and North America. SACS, which connects Angola and Brazil, is owned by Angola Cables and has been designed with 100Gbps coherent WDM technology on an end-to-end solution. With four fibre pairs, it offers a total design capacity of 40Tbps between Fortaleza in Brazil and Luanda in Angola. SACS launched commercial services in September. The lower cable distance and more direct routing means that it can offer the lowest latency for Internet traffic from South Africa to the United States. Angola Cables said SACS offers a high quality of service and improved latency of up to 60% over current routing options. “The cable will also contribute to reductions in data traffic costs between South America and Africa,” it said. SACS is now offering Cool Ideas customers lower latency to South America and the United States. The traceroutes below show the difference which SACS offers over WACS, which links South Africa with the United Kingdom. Tracing route to 138-36-3-214.texnet.net.br [138.36.3.214] over a maximum of 30 hops: 4   2 ms 2 ms 2 ms 154.0.4.101
+5   159 ms 160 ms 161 ms 154.0.1.106
+6   164 ms 166 ms 163 ms 195.66.226.95
+7   265 ms 265 ms 267 ms 170.238.232.41
+8   257 ms 223 ms 223 ms pe2-nc022.br.ftz.as37468.angolacables.ao [170.238.232.38]
+9   225 ms 233 ms 225 ms pe1-nc013.br.ftz.as37468.angolacables.ao [170.238.232.81]
+10   223 ms 222 ms 222 ms 170.238.235.18
+11   223 ms 224 ms 225 ms 187.120.30.6.cliente.primelinelatam.com.br [187.120.30.6]
+12   332 ms 332 ms 332 ms 192.168.128.38
+13   223 ms 223 ms 229 ms 192.168.128.54
+14   334 ms 337 ms 333 ms 138-36-0-38.texnet.net.br [138.36.0.38]
+15   223 ms 222 ms 223 ms 138-36-3-214.texnet.net.br [138.36.3.214] Tracing route to 138-36-3-214.texnet.net.br [138.36.3.214] over a maximum of 30 hops: 4   2 ms 2 ms 2 ms 154.0.3.114
+5   24 ms 24 ms 24 ms 154.0.1.246
+6   24 ms 31 ms 24 ms 154.0.4.162
+7   23 ms 23 ms 25 ms 102.130.64.13
+8   65 ms 57 ms 57 ms pe2-nc028.ang.sgn.as37468.angolacables.ao [197.149.151.194]
+9  116 ms 116 ms 116 ms 170.238.232.145
+10  124 ms 116 ms 124 ms pe1-nc013.br.ftz.as37468.angolacables.ao [170.238.232.81]
+11   115 ms 115 ms 117 ms 170.238.235.18
+12   116 ms 116 ms 117 ms 187.120.30.6.cliente.primelinelatam.com.br [187.120.30.6]
+13   114 ms 114 ms 115 ms 192.168.128.38
+14   230 ms 230 ms 230 ms 192.168.128.54
+15   119 ms * 116 ms 138-36-0-38.texnet.net.br [138.36.0.38]
+16   116 ms 116 ms 115 ms 138-36-3-214.texnet.net.br [138.36.3.214] Tracing route to 199.189.198.122 over a maximum of 30 hops: 3   14 ms 2 ms 2 ms c1-backbone.coolideas.co.za [154.0.2.1]
+4   3 ms 2 ms 3 ms 154.0.3.110
+5   164 ms 164 ms 166 ms 154.0.4.254
+6   159 ms 161 ms 160 ms v1000.core1.lon3.he.net [216.66.80.169]
+7   164 ms 174 ms 174 ms 100ge14-1.core1.lon2.he.net [184.105.64.237]
+8   249 ms 229 ms 230 ms 100ge13-2.core1.nyc4.he.net [72.52.92.166]
+9   237 ms 234 ms 234 ms 100ge16-1.core1.ash1.he.net [184.105.223.165]
+10   245 ms 245 ms 245 ms 100ge8-2.core1.atl1.he.net [184.105.213.69]
+11   245 ms 244 ms 244 ms 198.32.132.88
+12   246 ms 248 ms 246 ms 208.67.164.74
+13   257 ms 253 ms 253 ms 208.67.165.102
+14   271 ms 265 ms 266 ms 208.67.165.121
+15   264 ms 267 ms 264 ms 208.67.164.145
+16   262 ms 262 ms 262 ms 208.67.167.93
+17   266 ms 265 ms 271 ms 208.67.164.148
+18   265 ms 268 ms 271 ms 170.55.61.42
+19   265 ms 264 ms 264 ms 199.189.198.122 Tracing route to 199.189.198.122 over a maximum of 30 hops: 3   2 ms 4 ms 2 ms c1-backbone.coolideas.co.za [154.0.2.1]
+4   3 ms 3 ms 2 ms 154.0.3.114
+5   24 ms 22 ms 24 ms 154.0.1.62
+6   28 ms 26 ms 24 ms 154.0.4.162
+7   30 ms 30 ms 28 ms 102.130.64.13
+8   58 ms 58 ms 58 ms pe2-nc028.ang.sgn.as37468.angolacables.ao [197.149.151.194]
+9   119 ms 122 ms * 170.238.232.149
+10   178 ms 180 ms 180 ms 170.238.232.37
+11   224 ms 223 ms 236 ms m1070-miauflws-jm120a-ge203.fplfn.net [198.32.124.213]
+12   225 ms 224 ms 224 ms 208.67.164.158
+13   224 ms 224 ms 225 ms 170.55.61.42
+14   222 ms 222 ms 222 ms 199.189.198.122
