@@ -1,0 +1,24 @@
+A MyBroadband reader recently contacted us with a Windows 10 issue – he could not change his background wallpaper. While most PC users would laugh at a call for help in this case, further investigation revealed a more complex problem. The user had bought a pre-built PC running Windows 10, and used it for a year with no problems. He stopped using the PC for several months, and then bought new components to upgrade the machine. This included a new motherboard and processor. The plan was to take the existing hard drive with the Windows 10 installation and install it in the new PC – carrying over the copy of Windows 10. The reader put the new PC together and started it up – with all working fine. The PC started, and the user reset Windows 10 so he could have a “fresh install”. However, after installing Windows updates, drivers, and Steam, the user ran into a problem when trying to change his background wallpaper. He could not customise the element as his version of Windows 10 was not activated, according to a Settings menu message. There was also a warning in red which stated Windows could not be activated on the PC as it could not connect to his “organisation’s activation server”. “Make sure you’re connected to your organisation’s network and try again,” it stated. Below, there was an option to activate Windows by entering the software’s product key. To find the product key for Windows 10, Microsoft provides the following advice: Unfortunately, the reader had none of these options having bought his original desktop PC pre-built. Fortunately, there are other ways to find your Windows 10 licence key. As covered in posts on GitHub and How to Geek, you can run a VBScript that will read and display your Windows key. Please note that only advanced users should attempt this, and you should have a copy of your Windows 10 key on hand if it was purchased through a legitimate channel. The text below can be pasted into a Notepad document, and then saved with a .vbs extension. This can be done by selecting “Save as”, changing “Save as type” to “All Files”, and then typing the extension. For example, save the file as “key.vbs” to your desktop. Set WshShell = CreateObject(“WScript.Shell”)
+MsgBox ConvertToKey(WshShell.RegRead(“HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\DigitalProductId”)) Function ConvertToKey(Key)
+Const KeyOffset = 52
+i = 28
+Chars = “BCDFGHJKMPQRTVWXY2346789”
+Do
+Cur = 0
+x = 14
+Do
+Cur = Cur * 256
+Cur = Key(x + KeyOffset) + Cur
+Key(x + KeyOffset) = (Cur \ 24) And 255
+Cur = Cur Mod 24
+x = x -1
+Loop While x >= 0
+i = i -1
+KeyOutput = Mid(Chars, Cur + 1, 1) & KeyOutput
+If (((29 – i) Mod 6) = 0) And (i <> -1) Then
+i = i -1
+KeyOutput = “-” & KeyOutput
+End If
+Loop While i >= 0
+ConvertToKey = KeyOutput
+End Function Once the file is saved, you open it and it will display a pop-up with the Windows key. Once the user had found the key, he navigated back to his Windows 10 settings menu in an attempt to activate Windows. He copied the key from the pop-up and pasted it into the key section on the activation screen. This did not work, and the key was said to be invalid. The message stating that he must connect the PC to his organisation’s network also remained. More research revealed the reason for this may be that the version of Windows 10 the user had was a volume licensed version – which needed to connect to a KMS (Key Management Service) host. Volume licensing is used in organisations to provide multiple PCs with working versions of Windows 10, while preventing the operating system from being used outside of the business. To see if this version of Windows 10 was volume licensed – known as a GVLK key – users can enter the following line into Command Prompt. slmgr.vbs /dlv After running this, a window will pop up. Look for the section which states “Product Key Channel”. If it says “GVLK”, then that copy of Windows was activated using volume licensing. This is exactly what happened to the user – meaning he did not have a legitimate standalone copy of Windows 10. What does this mean for the home user? According to Windows Club, he will have to buy a new copy of Windows 10. When buying a PC from someone with Windows 10 already installed, users must make sure they clarify what type of installation it is and its legitimacy.
